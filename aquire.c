@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * screen_comot - initializes kingeso_t struct
+ * screen_comot - initializes raqking_size_t struct
  * @info: struct address
  */
-void screen_comot(kingeso_t *info)
+void screen_comot(raqking_size_t *info)
 {
 	info->arg = NULL;
 	info->argv = NULL;
@@ -13,11 +13,11 @@ void screen_comot(kingeso_t *info)
 }
 
 /**
- * _reset - initializes kingeso_t struct
+ * _reset - initializes raqking_size_t struct
  * @info: struct address
  * @av: argument vector
  */
-void _reset(kingeso_t *info, char **av)
+void _reset(raqking_size_t *info, char **av)
 {
 	int kk = 0;
 
@@ -45,11 +45,11 @@ void _reset(kingeso_t *info, char **av)
 }
 
 /**
- * _i_free - frees kingeso_t struct fields
+ * _i_free - frees raqking_size_t struct fields
  * @info: struct address
  * @all: true if freeing all fields
  */
-void _i_free(kingeso_t *info, int all)
+void _i_free(raqking_size_t *info, int all)
 {
 	free_mem(info->argv);
 	info->argv = NULL;

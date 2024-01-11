@@ -8,7 +8,7 @@
  *
  * Return: bytes read
  */
-ssize_t input_buf(kingeso_t *info, char **cushion, size_t *len)
+ssize_t input_buf(raqking_size_t *info, char **cushion, size_t *len)
 {
 	ssize_t r = 0;
 	size_t len_p = 0;
@@ -50,7 +50,7 @@ ssize_t input_buf(kingeso_t *info, char **cushion, size_t *len)
  *
  * Return: bytes read
  */
-ssize_t _get_usr_inp(kingeso_t *info)
+ssize_t _get_usr_inp(raqking_size_t *info)
 {
 	static char *cushion; /* the ';' command chain buffer */
 	static size_t kk, z, len;
@@ -97,7 +97,7 @@ ssize_t _get_usr_inp(kingeso_t *info)
  *
  * Return: r
  */
-ssize_t read_buf(kingeso_t *info, char *cushion, size_t *kk)
+ssize_t read_buf(raqking_size_t *info, char *cushion, size_t *kk)
 {
 	ssize_t r = 0;
 
@@ -117,7 +117,7 @@ ssize_t read_buf(kingeso_t *info, char *cushion, size_t *kk)
  *
  * Return: s
  */
-int _getline(kingeso_t *info, char **ptr, size_t *length)
+int _getline(raqking_size_t *info, char **ptr, size_t *length)
 {
 	static char cushion[APHA3];
 	static size_t kk, len;

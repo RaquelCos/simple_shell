@@ -8,7 +8,7 @@
  *
  * Return: 1 if chain delimeter, 0 otherwise
  */
-int _lace(kingeso_t *info, char *cushion, size_t *p)
+int _lace(raqking_size_t *info, char *cushion, size_t *p)
 {
 	size_t z = *p;
 
@@ -45,7 +45,7 @@ int _lace(kingeso_t *info, char *cushion, size_t *p)
  *
  * Return: Void
  */
-void lace_s(kingeso_t *info, char *cushion, size_t *p, size_t kk, size_t len)
+void lace_s(raqking_size_t *info, char *cushion, size_t *p, size_t kk, size_t len)
 {
 	size_t z = *p;
 
@@ -75,7 +75,7 @@ void lace_s(kingeso_t *info, char *cushion, size_t *p, size_t kk, size_t len)
  *
  * Return: 1 if replaced, 0 otherwise
  */
-int ref_al(kingeso_t *info)
+int ref_al(raqking_size_t *info)
 {
 	int kk;
 	list_t *node;
@@ -104,7 +104,7 @@ int ref_al(kingeso_t *info)
  *
  * Return: 1 if replaced, 0 otherwise
  */
-int ref_v(kingeso_t *info)
+int ref_v(raqking_size_t *info)
 {
 	int kk = 0;
 	list_t *node;

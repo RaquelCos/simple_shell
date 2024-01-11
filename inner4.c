@@ -7,7 +7,7 @@
  *        constant function prototype.
  *  Return: Always 0
  */
-int _moi_backup(kingeso_t *info)
+int _moi_backup(raqking_size_t *info)
 {
 	pri_l(info->backup);
 	return (0);
@@ -20,7 +20,7 @@ int _moi_backup(kingeso_t *info)
  *
  * Return: Always 0 on success, 1 on error
  */
-int unset_alias(kingeso_t *info, char *str)
+int unset_alias(raqking_size_t *info, char *str)
 {
 	char *p, c;
 	int ret;
@@ -43,7 +43,7 @@ int unset_alias(kingeso_t *info, char *str)
  *
  * Return: Always 0 on success, 1 on error
  */
-int set_alias(kingeso_t *info, char *str)
+int set_alias(raqking_size_t *info, char *str)
 {
 	char *p;
 
@@ -86,7 +86,7 @@ int print_alias(list_t *node)
  *          constant function prototype.
  *  Return: Always 0
  */
-int _alias_moi(kingeso_t *info)
+int _alias_moi(raqking_size_t *info)
 {
 	int kk = 0;
 	char *p = NULL;

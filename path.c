@@ -6,7 +6,7 @@
  *          constant function prototype.
  * Return: Always 0
  */
-int _env(kingeso_t *info)
+int _env(raqking_size_t *info)
 {
 	p_l_s(info->env);
 	return (0);
@@ -19,7 +19,7 @@ int _env(kingeso_t *info)
  *
  * Return: the value
  */
-char *_getenv(kingeso_t *info, const char *name)
+char *_getenv(raqking_size_t *info, const char *name)
 {
 	list_t *node = info->env;
 	char *p;
@@ -41,7 +41,7 @@ char *_getenv(kingeso_t *info, const char *name)
  *        constant function prototype.
  *  Return: Always 0
  */
-int _set_env(kingeso_t *info)
+int _set_env(raqking_size_t *info)
 {
 	if (info->argc != 3)
 	{
@@ -59,7 +59,7 @@ int _set_env(kingeso_t *info)
  *        constant function prototype.
  *  Return: Always 0
  */
-int _unset_env(kingeso_t *info)
+int _unset_env(raqking_size_t *info)
 {
 	int kk;
 
@@ -80,7 +80,7 @@ int _unset_env(kingeso_t *info)
  *          constant function prototype.
  * Return: Always 0
  */
-int gen128(kingeso_t *info)
+int gen128(raqking_size_t *info)
 {
 	list_t *node = NULL;
 	size_t kk;
@@ -89,4 +89,5 @@ int gen128(kingeso_t *info)
 		add_node_end(&node, environ[kk], 0);
 	info->env = node;
 	return (0);
+	free (info);
 }

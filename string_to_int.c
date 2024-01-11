@@ -6,7 +6,7 @@
  *
  * Return: 1 if itty mode, 0 otherwise
  */
-int itty(kingeso_t *info)
+int itty(raqking_size_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->rfd <= 2);
 }

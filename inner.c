@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * kingeso_exit - exits the shell
+ * raqking_exit - exits the shell
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: exits with a given exit curr_pos
  *         (0) if info.argv[0] != "exit"
  */
-int kingeso_exit(kingeso_t *info)
+int raqking_exit(raqking_size_t *info)
 {
 	int exitcheck;
 
@@ -35,7 +35,7 @@ int kingeso_exit(kingeso_t *info)
  *          constant function prototype.
  *  Return: Always 0
  */
-int _cd(kingeso_t *info)
+int _cd(raqking_size_t *info)
 {
 	char *s, *dir, buffer[1024];
 	int chdir_ret;
@@ -85,7 +85,7 @@ int _cd(kingeso_t *info)
  *          constant function prototype.
  *  Return: Always 0
  */
-int _help(kingeso_t *info)
+int _help(raqking_size_t *info)
 {
 	char **arg_array;
 

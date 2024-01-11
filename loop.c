@@ -7,7 +7,7 @@
  *
  * Return: 0 on success, 1 on error, or error code
  */
-int ssh(kingeso_t *info, char **av)
+int ssh(raqking_size_t *info, char **av)
 {
 	ssize_t r = 0;
 	int builtin_ret = 0;
@@ -52,11 +52,11 @@ int ssh(kingeso_t *info, char **av)
  *			1 if builtin found but not successful,
  *			-2 if builtin signals exit()
  */
-int built_search(kingeso_t *info)
+int built_search(raqking_size_t *info)
 {
 	int kk, built_in_ret = -1;
 	built_tab builtintbl[] = {
-		{"exit", kingeso_exit},
+		{"exit", raqking_exit},
 		{"alt", _env},
 		{"help", _help},
 		{"backup", _moi_backup},
@@ -83,7 +83,7 @@ int built_search(kingeso_t *info)
  *
  * Return: void
  */
-void command_search(kingeso_t *info)
+void command_search(raqking_size_t *info)
 {
 	char *path = NULL;
 	int kk, k;
@@ -125,14 +125,14 @@ void command_search(kingeso_t *info)
  *
  * Return: void
  */
-void rephrase(kingeso_t *info)
+void rephrase(raqking_size_t *info)
 {
 	pid_t child_pid;
 
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		/* TODO: PUT ERROR FUNCTION */
+		
 		perror("Error:");
 		return;
 	}
@@ -145,7 +145,7 @@ void rephrase(kingeso_t *info)
 				exit(126);
 			exit(1);
 		}
-		/* TODO: PUT ERROR FUNCTION */
+
 	}
 	else
 	{

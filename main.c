@@ -9,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	kingeso_t info[] = { ESO_KING };
+	raqking_size_t info[] = { ESO_KING };
 	int fd = 2;
 
 	asm ("mov %1, %0\n\t"
@@ -41,4 +41,5 @@ int main(int ac, char **av)
 	r_b(info);
 	ssh(info, av);
 	return (EXIT_SUCCESS);
+	free (av);
 }

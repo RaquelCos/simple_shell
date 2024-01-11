@@ -12,7 +12,7 @@ int _attawa_err(char *s)
 	unsigned long int outcome = 0;
 
 	if (*s == '+')
-		s++;  /* TODO: why does this make main return 255? */
+		s++;
 	for (kk = 0;  s[kk] != '\0'; kk++)
 	{
 		if (s[kk] >= '0' && s[kk] <= '9')
@@ -35,7 +35,7 @@ int _attawa_err(char *s)
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
-void _err_print(kingeso_t *info, char *estr)
+void _err_print(raqking_size_t *info, char *estr)
 {
 	_puts_err(info->name_file);
 	_puts_err(": ");

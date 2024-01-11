@@ -6,7 +6,7 @@
  *          constant function prototype.
  * Return: Always 0
  */
-char **get_environ(kingeso_t *info)
+char **get_environ(raqking_size_t *info)
 {
 	if (!info->environ || info->alt)
 	{
@@ -24,7 +24,7 @@ char **get_environ(kingeso_t *info)
  *  Return: 1 on delete, 0 otherwise
  * @var: the string env var property
  */
-int _unsetenv_moi(kingeso_t *info, char *var)
+int _unsetenv_moi(raqking_size_t *info, char *var)
 {
 	list_t *node = info->env;
 	size_t kk = 0;
@@ -58,7 +58,7 @@ int _unsetenv_moi(kingeso_t *info, char *var)
  * @value: the string env var value
  *  Return: Always 0
  */
-int _setenv_moi(kingeso_t *info, char *var, char *value)
+int _setenv_moi(raqking_size_t *info, char *var, char *value)
 {
 	char *cushion = NULL;
 	list_t *node;

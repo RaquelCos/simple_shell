@@ -7,7 +7,7 @@
  *
  * Return: 1 if true, 0 otherwise
  */
-int _command(kingeso_t *info, char *path)
+int _command(raqking_size_t *info, char *path)
 {
 	struct stat st;
 
@@ -50,7 +50,7 @@ char *ch_dup(char *pathstr, int start, int stop)
  *
  * Return: full path of cmd if found or NULL
  */
-char *path_file(kingeso_t *info, char *pathstr, char *cmd)
+char *path_file(raqking_size_t *info, char *pathstr, char *cmd)
 {
 	int kk = 0, curr_pos = 0;
 	char *path;

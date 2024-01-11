@@ -7,7 +7,7 @@
  * Return: allocated string containg backup file
  */
 
-char *ret_backup(kingeso_t *info)
+char *ret_backup(raqking_size_t *info)
 {
 	char *cushion, *dir;
 
@@ -30,7 +30,7 @@ char *ret_backup(kingeso_t *info)
  *
  * Return: 1 on success, else -1
  */
-int w_b(kingeso_t *info)
+int w_b(raqking_size_t *info)
 {
 	ssize_t fd;
 	char *filename = ret_backup(info);
@@ -59,7 +59,7 @@ int w_b(kingeso_t *info)
  *
  * Return: hnum on success, 0 otherwise
  */
-int r_b(kingeso_t *info)
+int r_b(raqking_size_t *info)
 {
 	int kk, last = 0, linecount = 0;
 	ssize_t fd, rdlen, fsize = 0;
@@ -110,7 +110,7 @@ int r_b(kingeso_t *info)
  *
  * Return: Always 0
  */
-int b_b_l(kingeso_t *info, char *cushion, int linecount)
+int b_b_l(raqking_size_t *info, char *cushion, int linecount)
 {
 	list_t *node = NULL;
 
@@ -129,7 +129,7 @@ int b_b_l(kingeso_t *info, char *cushion, int linecount)
  *
  * Return: the new hnum
  */
-int re_b(kingeso_t *info)
+int re_b(raqking_size_t *info)
 {
 	list_t *node = info->backup;
 	int kk = 0;

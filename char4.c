@@ -43,6 +43,7 @@ char *_strdup(const char *str)
 	for (length++; length--;)
 		ret[length] = *--str;
 	return (ret);
+	free (ret);
 }
 
 /**
